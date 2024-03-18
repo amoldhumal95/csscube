@@ -1,0 +1,77 @@
+body {
+
+    background-color: black;
+  }
+  
+  .cube {
+    width: 200px;
+    height: 200px;
+    top: 150px;
+    left : 260px;
+    display: flexbox;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(15deg) rotateY(15deg);
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+  }
+
+  .cube > div{
+    width:190px;
+    height:190px;
+    position:absolute;
+    border-radius:5px;
+    transition:transform 2s;
+    }
+
+    .cube > div >a{
+        color: crimson;
+        font-size: 25px;
+    }
+  
+  .face {
+    position: absolute;
+    width: 200px auto;
+    height: 200px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid crimson;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .front {transform: translateZ(100px); transition: 1s ease; }
+  .back { transform: rotateY(180deg) translateZ(100px); transition: 1s ease;}
+  .left { transform: rotateY(-90deg) translateZ(100px);transition: 1s ease; }
+  .right { transform: rotateY(90deg) translateZ(100px);transition: 1s ease; }
+  .top { transform: rotateX(90deg) translateZ(100px); transition: 1s ease;}
+  .bottom { transform: rotateX(-90deg) translateZ(100px); transition: 1s ease;}
+  
+  .navigation {
+    margin-top: 250px;
+    justify-content: center;
+    display: grid;
+  }
+  
+  .navigation button {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border:3px solid crimson;
+    border-radius:50px;
+  }
+
+  @media screen and (min-width: 720px) {
+    .cube {
+        top: 150px;
+        left : 45%;
+      }
+ }
+
+ @media screen and (min-width: 1080px) {
+    .cube {
+        top: 150px;
+        left : 45%;
+      }
+ }
+  
