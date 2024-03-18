@@ -61,6 +61,14 @@ body {
     border-radius:50px;
   }
 
+
+  @media screen and (min-width: 420px) {
+    .cube {
+        top: 150px;
+        left : 35%;
+      }
+ }
+      
   @media screen and (min-width: 720px) {
     .cube {
         top: 150px;
